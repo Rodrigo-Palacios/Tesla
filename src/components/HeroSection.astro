@@ -1,20 +1,24 @@
-		<section class=" bg-black h-screen text-center overflow-hidden relative landing-section" data-header-color="white">
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
 
-			<div class="z-30 relative h-full flex flex-col">
+		<section class="bg-black h-[100svh] text-center overflow-hidden relative landing-section" data-header-color="white">
+
+			<div class="z-10 relative h-full flex flex-col">
 				<header class="z-30 relative">
-					<h2 class="text-white pt-40 text-[40px] font-medium">Disfruta de Tesla</h2>
+					<h2 class="text-white pt-28 sm:pt-40 text-[32px] sm:text-[40px] font-medium">Disfruta de Tesla</h2>
 					<p class="text-white text-sm">Programa una prueba de conducción</p>
 				</header>
 
-				<footer class="flex flex-col flex-grow justify-end pb-24">
-					<div>
-						<a class="border-[3px] border-white bg-white/5 rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors duration-300" href="#">Prueba de conducción</a>
+				<footer class="flex flex-col flex-grow justify-end pb-10 sm:pb-16 lg:pb-24 px-6">
+					<div class="w-full">
+						<a class="border-[3px] border-white bg-white/5 rounded font-medium text-white px-6 sm:px-12 py-2 inline-block w-full sm:w-auto max-w-sm hover:bg-white hover:text-black transition-colors duration-300" href="#">Prueba de conducción</a>
 					</div>
 				</footer>
 			</div>
 
 
-			<div class="absolute top-0 bottom-0 h-full w-full z-10">
-				<video class="object-center object-cover h-full w-full" autoplay muted loop src="/public/video.webm"></video>
+			<div class="absolute inset-0 z-0">
+				<video class="object-center object-cover h-full w-full" autoplay muted loop playsinline src={`${base}/video.webm`}></video>
 			</div>
 		</section>
